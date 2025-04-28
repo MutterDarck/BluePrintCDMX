@@ -18,7 +18,7 @@ class ServiceController extends Controller
         [
             'slug' => 'Impresion-digital',
             'title' => 'Impresión Digital de Alta Calidad',
-            'desccription' => 'Imprimimos tu diseño en diversos materiales con acabados profesionales.',
+            'description' => 'Imprimimos tu diseño en diversos materiales con acabados profesionales.',
             'image' => 'ruta/a/tu/imagen-impresion.jpg',
         ],
         // AGREGA MAS SERVICIOS
@@ -33,10 +33,10 @@ class ServiceController extends Controller
     {
         $services = collect($this->services)->firstWhere('slug', $slug);
 
-        if (!$service) {
+        if (!$services) {
             abort (404);
         }
 
-        return view('services.show',['service' => $service]);
+        return view('services.show',['service' => $services]);
     }
 }

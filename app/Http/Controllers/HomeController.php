@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('welcome'); // Aquí puedes cargar cualquier vista que quieras
+        return view('home'); // Aquí puedes cargar cualquier vista que quieras
     }
 }
